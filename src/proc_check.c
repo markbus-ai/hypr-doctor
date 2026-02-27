@@ -48,7 +48,7 @@ int is_running(const char *proc_name) {
     }
 
     // comm truncado: verificar cmdline completo
-    char cmdline_path[64];
+    char cmdline_path[300];
     snprintf(cmdline_path, sizeof(cmdline_path), "/proc/%s/cmdline",
              entry->d_name);
 

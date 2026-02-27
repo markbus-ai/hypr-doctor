@@ -1,0 +1,9 @@
+# Binaries
+hypr-doctor
+
+# Object files
+*.o
+src/*.o
+
+# Temporary files
+*.tmp
