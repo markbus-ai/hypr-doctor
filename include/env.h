@@ -19,6 +19,9 @@ typedef struct {
 #define C_YELLOW "\033[1;33m"
 #define C_BLUE "\033[1;34m"
 #define C_WHITE "\033[1;37m"
+#define C_CYAN "\033[1;36m"
+#define C_MAGENTA "\033[1;35m"
+#define C_BOLD "\033[1m"
 typedef struct {
   const char *exact;     // valor exacto, o NULL
   const char *prefix;    // prefijo aceptado, o NULL

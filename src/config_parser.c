@@ -37,7 +37,7 @@ int is_useless(const char *line) {
 }
 
 // Reemplazo simple de una ocurrencia en una línea
-void patch_line(char *line, const DeprecatedPattern *p, FILE *out, int lineno) {
+void patch_line(char *line, const DeprecatedPattern *p, int lineno) {
   char *pos = strstr(line, p->pattern);
   if (pos) {
     printf("  %s[%s]" C_RESET " linea %d: '%s' -> %s\n", p->color, p->level,
@@ -87,7 +87,7 @@ int parser(void) {
     if (!is_useless(line)) {
       for (size_t i = 0; i < N_PATTERNS; i++) {
         if (strstr(line, patterns[i].pattern)) {
-          patch_line(line, &patterns[i], out, lineno);
+          patch_line(line, &patterns[i], lineno);
           total_matches++;
         }
       }
